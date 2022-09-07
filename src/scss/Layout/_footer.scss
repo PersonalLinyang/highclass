@@ -1,0 +1,209 @@
+.footer {
+  &-inner  {
+    @include mq(pc) {
+      width: vwPC(1000);
+      margin: vwPC(42) auto vwPC(46);
+      overflow: hidden;
+    }
+    
+    @include mq(sp) {
+      width: vw(295);
+      margin: vw(27) auto vw(28);
+    }
+  }
+  
+  &-navi  {
+    @include mq(pc) {
+      float: left;
+    }
+    
+    &-item {
+      position: relative;
+      
+      @include mq(pc) {
+        height: vwPC(40);
+      }
+      
+      @include mq(sp) {
+        height: vw(35);
+      }
+      
+      &-en {
+        position: absolute;
+        top: 0;
+        font-family: $dm_sans;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        white-space: nowrap;
+        
+        @include mq(pc) {
+          left: 0;
+          font-size: vwPC(24);
+          line-height: vwPC(40);
+        }
+        
+        @include mq(sp) {
+          left: vw(49);
+          font-size: vw(18);
+          line-height: vw(35);
+        }
+      }
+      
+      &-jp {
+        position: absolute;
+        top: 0;
+        font-family: source-han-sans-japanese, sans-serif;
+        font-weight: 500;
+        white-space: nowrap;
+        
+        @include mq(pc) {
+          left: vwPC(158);
+          font-size: vwPC(15);
+          line-height: vwPC(40);
+        }
+        
+        @include mq(sp) {
+          left: vw(170);
+          font-size: vw(12);
+          line-height: vw(35);
+        }
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        background: #C7CDD5;
+        
+        @include mq(pc) {
+          width: vwPC(20);
+          height: vwPC(2);
+          top: vwPC(19);
+          left: vwPC(121.5);
+        }
+        
+        @include mq(sp) {
+          width: vw(17.72);
+          height: vw(2);
+          top: vw(16.5);
+          left: vw(139.62);
+        }
+      }
+    }
+  }
+  
+  &-info {
+    @include mq(pc) {
+      float: right;
+      width: vwPC(390);
+    }
+    
+    @include mq(sp) {
+      width: vw(286);
+      margin: vw(27) auto 0;
+    }
+    
+    &-logo {
+      @include mq(pc) {
+        width: vwPC(267);
+        margin-top: vwPC(4);
+      }
+      
+      @include mq(sp) {
+        width: vw(148);
+      }
+    }
+    
+    &-name {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 700;
+      
+      @include mq(pc) {
+        font-size: vwPC(30);
+        line-height: vwPC(44);
+        margin-top: vwPC(10);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(16);
+        line-height: vw(24);
+        margin-top: vw(5);
+      }
+    }
+    
+    &-address {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 500;
+      
+      @include mq(pc) {
+        font-size: vwPC(15);
+        line-height: vwPC(21);
+        margin-top: vwPC(13);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(11);
+        line-height: vw(16);
+        margin-top: vw(4);
+      }
+    }
+    
+    &-homepage {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 500;
+      color: #000;
+      
+      @include mq(pc) {
+        font-size: vwPC(15);
+        line-height: vwPC(21);
+        margin-top: vwPC(4);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(11);
+        line-height: vw(16);
+        margin-top: vw(4);
+      }
+      
+      a:hover {
+        color: #ADD700;
+      }
+    }
+    
+    &-staff {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 500;
+      
+      @include mq(pc) {
+        font-size: vwPC(15);
+        line-height: vwPC(21);
+        margin-top: vwPC(4);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(11);
+        line-height: vw(16);
+        margin-top: vw(4);
+      }
+    }
+  }
+  
+  &-company {
+    background: #000;
+    color: #FFF;
+    font-family: source-han-sans-japanese, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    
+    @include mq(pc) {
+      height: vwPC(60);
+      font-size: vwPC(15);
+      line-height: vwPC(60);
+    }
+    
+    @include mq(sp) {
+      height: vw(42);
+      font-size: vw(10);
+      line-height: vw(42);
+    }
+  }
+}

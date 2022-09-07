@@ -1,0 +1,2012 @@
+.front {
+  &-section-title {
+    position: relative;
+    overflow: hidden;
+    
+    @include mq(pc) {
+      height: vwPC(319);
+    }
+    
+    @include mq(sp) {
+      height: vw(106);
+    }
+    
+    &-en {
+      position: absolute;
+      top: 0;
+      font-family: $dm_sans;
+      font-weight: 700;
+      white-space: nowrap;
+      color: #F8F8F8;
+      
+      @include mq(pc) {
+        font-size: vwPC(240);
+        line-height: vwPC(319);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(80);
+        line-height: vw(106);
+      }
+    }
+    
+    &-jp {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      
+      @include mq(pc) {
+        font-size: vwPC(42);
+        line-height: vwPC(61);
+        top: vwPC(157.5);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(20);
+        line-height: vw(29);
+        top: vw(50);
+      }
+      
+      &:before {
+        content:  "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #051714;
+        
+        @include mq(pc) {
+          height: vwPC(6);
+        }
+        
+        @include mq(sp) {
+          height: vw(4);
+        }
+      }
+    }
+  }
+  
+  &-contact-linkbtn {
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-family: dnp-shuei-gothic-gin-std, sans-serif;
+    color: #FFF;
+    overflow: hidden;
+    
+    a {
+      color: #FFF;
+      
+      &:hover {
+        color: #000;
+      }
+    }
+    
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 120%;
+      height: 100%;
+      background: #FFF;
+      transform-origin: right top;
+      transform: skewX(-30deg) scale(0, 1);
+      transition: transform .3s;
+    }
+    
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 3;
+      white-space: nowrap;
+    }
+    
+    &:hover {
+      color: #000;
+      background-color: #FFF;
+      transition: background-color  0s ease;
+      transition-delay: .3s;
+      
+      &:before {
+        transform-origin: left top;
+        transform: skewX(-30deg) scale(1, 1);
+      }
+    }
+    
+    @include mq(pc) {
+      width: vwPC(420);
+      height: vwPC(100);
+      border: vwPC(3) solid #FFF;
+      border-radius: vwPC(50);
+      font-size: vwPC(26);
+      line-height: vwPC(100);
+    }
+    
+    @include mq(sp) {
+      width: vw(238);
+      height: vw(56);
+      border: vw(3) solid #FFF;
+      border-radius: vw(28);
+      font-size: vw(16);
+      line-height: vw(56);
+    }
+    
+    &.black {
+      color: #000;
+      
+      &:hover {
+        color: #FFF;
+        background-color: #000;
+      }
+      
+      a {
+        color: #000;
+        
+        &:hover {
+          color: #FFF;
+        }
+      }
+      
+      &:before {
+        background: #000;
+      }
+      
+      @include mq(pc) {
+        border: vwPC(3) solid #000;
+      }
+      
+      @include mq(sp) {
+        border: vw(3) solid #000;
+      }
+    }
+  }
+  
+  &-mv {
+    position: relative;
+    
+    @include mq(pc) {
+      width: 100%;
+      height: vwPC(781);
+    }
+    
+    @include mq(sp) {
+      width: vw(375);
+      height: vw(540.33);
+    }
+    
+    &-image1 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-size: 100%;
+      
+      @include mq(pc) {
+        width: vwPC(832);
+        height: vwPC(781);
+        background-image: url("../img/front/pc-mv-1.png");
+        z-index: 3;
+      }
+      
+      @include mq(sp) {
+        width: vw(375);
+        height: vw(384.09);
+        background-image: url("../img/front/sp-mv-1.png");
+        z-index: 2;
+      }
+    }
+    
+    &-image2 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-size: 100%;
+      
+      @include mq(pc) {
+        width: vwPC(912);
+        height: vwPC(781);
+        background-image: url("../img/front/pc-mv-2.png");
+        z-index: 2;
+      }
+      
+      @include mq(sp) {
+        width: vw(375);
+        height: vw(328.67);
+        background-image: url("../img/front/sp-mv-2.png");
+        z-index: 3;
+      }
+    }
+    
+    &-cover {
+      background: rgba(0,0,0,0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+      
+      @include mq(pc) {
+        width: 100%;
+        height: vwPC(781);
+      }
+      
+      @include mq(sp) {
+        width: vw(375);
+        height: vw(540.33);
+      }
+    }
+    
+    &-title {
+      color: #FFF;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      font-family: noto-sans-cjk-jp, sans-serif;
+      
+      @include mq(pc) {
+        font-size: vwPC(70);
+        line-height: vwPC(101);
+        text-shadow: 0 vwPC(3) vwPC(10) rgba(0,0,0,0.16);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(30);
+        line-height: vw(44);
+        text-shadow: 0 vw(3) vw(10) rgba(0,0,0,0.16);
+      }
+      
+      &-area {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        
+        @include mq(pc) {
+          top: vwPC(252);
+        }
+        
+        @include mq(sp) {
+          top: vw(193);
+        }
+      }
+    }
+    
+    &-subtitle {
+      color: #FFF;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      font-family: noto-sans-cjk-jp, sans-serif;
+      
+      @include mq(pc) {
+        margin-top: vwPC(16);
+        font-size: vwPC(42);
+        line-height: vwPC(60);
+        text-shadow: 0 vwPC(3) vwPC(10) rgba(0,0,0,0.16);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(11);
+        font-size: vw(20);
+        line-height: vw(32);
+        text-shadow: 0 vw(3) vw(10) rgba(0,0,0,0.16);
+      }
+    }
+    
+    &-button {
+      position: absolute;
+      left: 50%;
+      z-index: 5;
+      transform: translateX(-50%);
+      
+      @include mq(pc) {
+        top: vwPC(551);
+      }
+      
+      @include mq(sp) {
+        top: vw(412.83);
+      }
+    }
+  }
+  
+  &-trouble {
+    @include mq(pc) {
+      margin-top: vwPC(50);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(23);
+    }
+    
+    &-title {
+      position: relative;
+      overflow: hidden;
+      
+      &-en {
+        font-family: $dm_sans;
+        color: #F8F8F8;
+        font-weight: 700;
+        
+        @include mq(pc) {
+          font-size: vwPC(240);
+          line-height: vwPC(319);
+          margin-left: vwPC(-24);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(80);
+          line-height: vw(106);
+          margin-left: vw(-4);
+        }
+      }
+      
+      &-jp {
+        font-family: source-han-sans-japanese, sans-serif;
+        font-weight: 700;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        letter-spacing: 0.1em;
+        
+        @include mq(pc) {
+          font-size: vwPC(50);
+          line-height: vwPC(72);
+          top: vwPC(156.5);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(20);
+          line-height: vw(29);
+          top: vw(44.5);
+        }
+      }
+    }
+    
+    &-content {
+      @include mq(pc) {
+        margin-top: vwPC(14);
+      }
+    }
+    
+    &-item {
+      overflow: hidden;
+      
+      @include mq(pc) {
+        margin-bottom: vwPC(49);
+      }
+      
+      @include mq(sp) {
+        margin-bottom: vw(16);
+      }
+      
+      &-content {
+        @include mq(pc) {
+          position: relative;
+          width: 50%;
+        }
+        
+        @include mq(sp) {
+          margin: 0 vw(20.5);
+        }
+        
+        &.left {
+          @include mq(pc) {
+            float: left;
+            text-align: right;
+          }
+        }
+        
+        &.right {
+          @include mq(pc) {
+            float: right;
+            text-align: left;
+          }
+        }
+      }
+      
+      &-title {
+        &-en {
+          white-space: nowrap;
+          font-family: $dm_sans;
+          color: #F8F8F8;
+          font-weight: 700;
+          width: 100%;
+          
+          @include mq(pc) {
+            position: absolute;
+            font-size: vwPC(100);
+            line-height: vwPC(133);
+            top: vwPC(20);
+            max-width: vwPC(583);
+            z-index: 3;
+          }
+          
+          @include mq(sp) {
+            font-size: vw(50);
+            line-height: vw(67);
+          }
+          
+          &.left {
+            @include mq(pc) {
+              text-align: left;
+              right: 0;
+            }
+          }
+          
+          &.right {
+            @include mq(pc) {
+              text-align: right;
+              left: 0;
+            }
+          }
+        }
+        
+        &-jp {
+          font-family: source-han-sans-japanese, sans-serif;
+          letter-spacing: 0.05em;
+          font-weight: 700;
+          white-space: nowrap;
+          width: 100%;
+          text-align: left;
+          
+          @include mq(pc) {
+            position: absolute;
+            font-size: vwPC(38);
+            line-height: vwPC(56);
+            top: vwPC(94);
+            width: 100%;
+            z-index: 4;
+            max-width: vwPC(583);
+          }
+          
+          @include mq(sp) {
+            font-size: vw(18);
+            line-height: vw(30);
+            margin: vw(-30) vw(20) 0;
+          }
+          
+          &.left {
+            @include mq(pc) {
+              right: 0;
+              padding-left: vwPC(83);
+            }
+          }
+          
+          &.right {
+            @include mq(pc) {
+              left: 0;
+              padding-left: vwPC(36);
+              padding-right: vwPC(83);
+            }
+          }
+        }
+      }
+      
+      &-text {
+        font-family: source-han-sans-japanese, sans-serif;
+        font-weight: 500;
+        text-align: left;
+        
+        @include mq(pc) {
+          font-size: vwPC(15);
+          line-height: vwPC(30);
+          margin-top: vwPC(225);
+          width: 100%;
+          z-index: 4;
+          max-width: vwPC(583);
+          display: inline-block;
+        }
+        
+        @include mq(sp) {
+          font-size: vw(11);
+          line-height: vw(20);
+          margin: vw(10) vw(20) 0;
+        }
+        
+        &.left {
+          @include mq(pc) {
+            padding-left: vwPC(83);
+            padding-right: vwPC(36);
+          }
+        }
+        
+        &.right {
+          @include mq(pc) {
+            padding-right: vwPC(83);
+            padding-left: vwPC(36);
+          }
+        }
+      }
+      
+      &-image {
+        font-size: 0;
+        
+        @include mq(pc) {
+          width: calc(50% - 34px);
+          max-width: vwPC(620);
+          min-height: vwPC(370);
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(12.77);
+          min-height: vw(205);
+        }
+        
+        &.left {
+          @include mq(pc) {
+            float: left;
+          }
+          
+          @include mq(sp) {
+            margin-right: vw(40);
+          }
+        }
+        
+        &.right {
+          @include mq(pc) {
+            float: right;
+          }
+          
+          @include mq(sp) {
+            margin-left: vw(40);
+          }
+        }
+        
+        &-inner {
+          position: relative;
+          
+          @include mq(pc) {
+            padding-top: 30px;
+          }
+          
+          @include mq(sp) {
+            padding-top: 10px;
+          }
+          
+          &.left {
+            @include mq(pc) {
+              padding-right: 30px;
+            }
+            
+            @include mq(sp) {
+              padding-right: 10px;
+            }
+            
+            &:before {
+              left: 0;
+            }
+          }
+          
+          &.right {
+            @include mq(pc) {
+              padding-left: 30px;
+            }
+            
+            @include mq(sp) {
+              padding-left: 10px;
+            }
+            
+            &:before {
+              @include mq(pc) {
+                left: 30px;
+              }
+              
+              @include mq(sp) {
+                left: 10px;
+              }
+            }
+          }
+        }
+        
+        &-dark {
+          position: relative;
+          
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+          }
+        }
+        
+        &-float {
+          width: 100%;
+          z-index: 2;
+          position: absolute;
+          
+          @include mq(pc) {
+            width: calc(100% - 30px);
+            top: 0;
+          }
+          
+          @include mq(sp) {
+            width: calc(100% - 10px);
+            top: 0;
+          }
+          
+          &.left {
+            @include mq(pc) {
+              left: 30px;
+            }
+            
+            @include mq(sp) {
+              left: 10px;
+            }
+          }
+          
+          &.right {
+            left: 0;
+          }
+        }
+        
+        &-shadow {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          background: #ADD700;
+        }
+        
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  &-contact-banner-1 {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    @include mq(pc) {
+      margin-top: vwPC(87);
+      padding-top: vwPC(191);
+      background-image: url("../img/front/pc-contact-banner-1.jpg");
+      height: vwPC(801);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(40);
+      padding-top: vw(104.36);
+      background-image: url("../img/front/sp-contact-banner-1.jpg");
+      height: vw(402);
+    }
+    
+    &-content {
+      margin: 0 auto;
+      
+      @include mq(pc) {
+        width: vwPC(1166);
+        padding-left: vwPC(83);
+      }
+      
+      @include mq(sp) {
+        width: vw(355);
+        padding-left: vw(30);
+      }
+    }
+    
+    &-inner {
+      position: relative;
+      
+      @include mq(pc) {
+        border-left: 6px solid #FFF;
+        padding-top: vwPC(108);
+        padding-left: vwPC(65);
+        padding-bottom: vwPC(4);
+      }
+      
+      @include mq(sp) {
+        border-left: 4px solid #FFF;
+        padding-top: vw(0.28);
+        padding-left: vw(21);
+        padding-bottom: vw(2.35);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        
+        @include mq(pc) {
+          background: linear-gradient(to bottom left, transparent calc(50% - 3px), #FFF calc(50% - 3px), #FFF calc(50% + 3px), transparent calc(50% + 3px));
+          width: vwPC(48);
+          height: vwPC(48);
+          left: vwPC(-54);
+        }
+        
+        @include mq(sp) {
+          background: linear-gradient(to bottom left, transparent calc(50% - 2px), #FFF calc(50% - 2px), #FFF calc(50% + 2px), transparent calc(50% + 2px));
+          width: vw(18);
+          height: vw(18);
+          left: vw(-20);
+        }
+      }
+    }
+    
+    &-title {
+      font-family: noto-sans-cjk-jp, sans-serif;
+      white-space: nowrap;
+      color: #FFF;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        font-size: vwPC(60);
+        line-height: vwPC(87);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(18);
+        line-height: vw(26);
+      }
+    }
+    
+    &-text {
+      font-family: noto-sans-cjk-jp, sans-serif;
+      color: #FFF;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        font-size: vwPC(30);
+        line-height: vwPC(50);
+        margin-top: vwPC(39);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(14);
+        line-height: vw(26);
+        margin-top: vw(25);
+      }
+    }
+    
+    &-button {
+      @include mq(pc) {
+        margin-top: vwPC(40);
+        margin-left: vwPC(100);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(37.65);
+        margin-left: vw(30);
+      }
+    }
+  }
+  
+  &-animation {
+    @include mq(pc) {
+      margin-top: vwPC(86);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(40);
+    }
+    
+    &-title {
+      text-align: center;
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        font-size: vwPC(38);
+        line-height: vwPC(55);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(16);
+        line-height: vw(24);
+      }
+    }
+    
+    &-video {
+      position: relative;
+      font-size: 0;
+      
+      @include mq(pc) {
+        margin: vwPC(28) auto 0;
+        width: vwPC(1028);
+      }
+      
+      @include mq(sp) {
+        margin: vw(13) auto 0;
+        width: vw(315);
+      }
+      
+      video {
+        width: 100%;
+      }
+    }
+    
+    &-play {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.2);
+      z-index: 2;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+        @include mq(pc) {
+          width: vwPC(196);
+          height: vwPC(196);
+          border-radius: vwPC(202);
+          border: vwPC(6) solid #FFF;
+        }
+        
+        @include mq(sp) {
+          width: vw(60);
+          height: vw(60);
+          border-radius: vw(34);
+          border: vw(4) solid #FFF;
+        }
+      }
+      
+      &:after {
+        content: "";
+        position: absolute;
+        
+        @include mq(pc) {
+          top: vwPC(246);
+          left: vwPC(483);
+          border-left: vwPC(72) solid #FFF;
+          border-top: vwPC(42) solid transparent;
+          border-bottom: vwPC(42) solid transparent;
+        }
+        
+        @include mq(sp) {
+          top: vw(76);
+          left: vw(149);
+          border-left: vw(21) solid #FFF;
+          border-top: vw(13) solid transparent;
+          border-bottom: vw(13) solid transparent;
+        }
+      }
+    }
+  }
+  
+  &-reason {
+    @include mq(pc) {
+      margin-top: vwPC(30);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(33);
+    }
+    
+    &-title {
+      &-en {
+        @include mq(pc) {
+          left: vwPC(618);
+        }
+        
+        @include mq(sp) {
+          left: vw(109);
+        }
+      }
+      
+      &-jp {
+        &:before {
+          left: 0;
+          
+          @include mq(pc) {
+            width: vwPC(463);
+          }
+          
+          @include mq(sp) {
+            width: vw(90);
+          }
+        }
+      }
+    }
+    
+    &-content {
+      position: relative;
+      
+      @include mq(pc) {
+        margin-top: vwPC(-42.5);
+        padding-top: 5%;
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(14);
+        padding-top: 10%;
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        background: linear-gradient(to bottom left, transparent 50%, #F8F8F8 50%);
+        
+        @include mq(pc) {
+          padding-top: 5%;
+          width: 50%;
+        }
+        
+        @include mq(sp) {
+          padding-top: 10%;
+          width: 100%;
+        }
+      }
+      
+      &:after {
+        @include mq(pc) {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translateY(100%);
+          height: 0;
+          background: linear-gradient(to bottom left, #F8F8F8 50%, transparent 50%);
+          padding-top: 5%;
+          width: 50%;
+        }
+      }
+    }
+    
+    &-item {
+      background: #F8F8F8;
+      position: relative;
+      
+      @include mq(pc) {
+        overflow: hidden;
+      }
+      
+      &:first-child {
+        &:after {
+          @include mq(pc) {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 0;
+            padding-top: 5%;
+            background: linear-gradient(to bottom left, #FFF 50%, transparent 50%);
+          }
+        }
+      }
+      
+      &:last-child {
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 0;
+          background: linear-gradient(to bottom left, transparent 50%, #FFF 50%);
+          
+          @include mq(pc) {
+            padding-top: 5%;
+            width: 50%;
+          }
+          
+          @include mq(sp) {
+            padding-top: 10%;
+            width: 100%;
+          }
+        }
+      }
+      
+      &-content {
+        @include mq(pc) {
+          width: 50%;
+        }
+        
+        &.left {
+          @include mq(pc) {
+            float: left;
+          }
+        }
+        
+        &.right {
+          @include mq(pc) {
+            float: right;
+          }
+        }
+      }
+      
+      &-no {
+        font-family: $dm_sans;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #ADD700;
+        position: relative;
+        
+        @include mq(pc) {
+          font-size: vwPC(180);
+          line-height: vwPC(239);
+          padding-top: vwPC(20.5);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(80);
+          line-height: vw(106);
+          padding-top: vw(15);
+        }
+        
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: #000;
+          
+          @include mq(pc) {
+            width: vwPC(300);
+            height: vwPC(6);
+          }
+          
+          @include mq(sp) {
+            width: vw(210);
+            height: vw(4);
+          }
+        }
+        
+        &.left {
+          @include mq(pc) {
+            padding-left: vwPC(100);
+          }
+          
+          @include mq(sp) {
+            padding-left: vw(37);
+          }
+          
+          &:before {
+            right: 0;
+          }
+        }
+        
+        &.right {
+          text-align: right;
+          
+          @include mq(pc) {
+            padding-right: vwPC(100);
+          }
+          
+          @include mq(sp) {
+            padding-right: vw(37);
+          }
+          
+          &:before {
+            left: 0;
+          }
+        }
+      }
+      
+      &-title {
+        font-family: source-han-sans-japanese, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        
+        @include mq(pc) {
+          font-size: vwPC(38);
+          line-height: vwPC(56);
+          margin-top: vwPC(9);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(18);
+          line-height: vw(30);
+          margin-top: vw(5);
+          padding: 0 vw(40);
+        }
+        
+        &.left {
+          @include mq(pc) {
+            padding-left: vwPC(100);
+            padding-right: vwPC(75);
+          }
+        }
+        
+        &.right {
+          @include mq(pc) {
+            padding-right: vwPC(100);
+            padding-left: vwPC(75);
+          }
+        }
+      }
+      
+      &-text {
+        font-family: source-han-sans-japanese, sans-serif;
+        font-weight: 500;
+        
+        @include mq(pc) {
+          font-size: vwPC(15);
+          line-height: vwPC(30);
+          margin-top: vwPC(26);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(11);
+          line-height: vw(20);
+          margin-top: vw(10);
+          padding: 0 vw(40);
+        }
+        
+        &.left {
+          @include mq(pc) {
+            padding-left: vwPC(100);
+            padding-right: vwPC(75);
+          }
+        }
+        
+        &.right {
+          @include mq(pc) {
+            padding-right: vwPC(100);
+            padding-left: vwPC(75);
+          }
+        }
+      }
+      
+      &-image {
+        @include mq(pc) {
+          width: 50%;
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(20);
+        }
+        
+        &.left {
+          @include mq(pc) {
+            float: left;
+          }
+        }
+        
+        &.right {
+          @include mq(pc) {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+  
+  &-case {
+    @include mq(pc) {
+      margin-top: vwPC(47);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(13);
+    }
+    
+    &-title {
+      &-en {
+        @include mq(pc) {
+          left: vwPC(113);
+        }
+        
+        @include mq(sp) {
+          left: vw(32);
+        }
+      }
+      
+      &-jp {
+        &:before {
+          right: 0;
+          
+          @include mq(pc) {
+            width: vwPC(534);
+          }
+          
+          @include mq(sp) {
+            width: vw(122);
+          }
+        }
+      }
+    }
+    
+    &-content {
+      @include mq(pc) {
+        margin-top: vwPC(14);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(15);
+      }
+    }
+    
+    &-item {
+      @include mq(pc) {
+        margin-top: vwPC(116);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(40);
+      }
+      
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    
+    &-info {
+      overflow: hidden;
+      position: relative;
+      
+      @include mq(pc) {
+        width: vwPC(1166);
+        min-height: vwPC(400);
+        margin: 0 auto;
+      }
+      
+      @include mq(sp) {
+        min-height: vw(162);
+      }
+    }
+    
+    &-image {
+      @include mq(pc) {
+        width: vwPC(700);
+      }
+      
+      @include mq(sp) {
+        width: vw(302);
+      }
+      
+      &.left {
+        float: left;
+      }
+      
+      &.right {
+        float: right;
+      }
+    }
+    
+    &-name {
+      position: absolute;
+      z-index: 199;
+      background: #ADD700;
+      font-family: dnp-shuei-gothic-gin-std, sans-serif;
+      font-weight: 700;
+      color: #FFF;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        font-size: vwPC(38);
+        line-height: vwPC(76);
+        padding: 0 vwPC(20);
+        top: vwPC(162);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(15);
+        line-height: vw(30.72);
+        padding: 0 vw(10);
+        top: vw(56);
+      }
+      
+      &.left {
+        @include mq(pc) {
+          left: vwPC(211);
+        }
+        
+        @include mq(sp) {
+          left: vw(20);
+        }
+      }
+      
+      &.right {
+        @include mq(pc) {
+          left: vwPC(636);
+        }
+        
+        @include mq(sp) {
+          left: vw(207);
+        }
+      }
+    }
+    
+    &-position {
+      position: absolute;
+      z-index: 199;
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        font-size: vwPC(24);
+        line-height: vwPC(35);
+        top: vwPC(258);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(12);
+        line-height: vw(17);
+        top: vw(91);
+      }
+      
+      &.left {
+        @include mq(pc) {
+          left: vwPC(211);
+        }
+        
+        @include mq(sp) {
+          left: vw(20);
+        }
+      }
+      
+      &.right {
+        @include mq(pc) {
+          left: vwPC(636);
+        }
+        
+        @include mq(sp) {
+          left: vw(207);
+        }
+      }
+    }
+    
+    &-text {
+      @include mq(pc) {
+        width: vwPC(1000);
+        margin: vwPC(40) auto 0;
+        font-size: vwPC(15);
+        line-height: vwPC(30);
+      }
+      
+      @include mq(sp) {
+        width: vw(315);
+        margin: vw(10) auto 0;
+        font-size: vw(11);
+        line-height: vw(20);
+      }
+    }
+  }
+  
+  &-trainer {
+    @include mq(pc) {
+      margin-top: vwPC(51);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(43);
+    }
+    
+    &-title {
+      &-en {
+        @include mq(pc) {
+          left: vwPC(586);
+        }
+        
+        @include mq(sp) {
+          left: vw(109);
+        }
+      }
+      
+      &-jp {
+        &:before {
+          left: 0;
+          
+          @include mq(pc) {
+            width: vwPC(526);
+          }
+          
+          @include mq(sp) {
+            width: vw(90);
+          }
+        }
+      }
+    }
+    
+    &-content {
+      position: relative;
+      
+      @include mq(pc) {
+        margin-top: vwPC(-53.5);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(5.33);
+      }
+    }
+    
+    &-info {
+      position: absolute;
+      
+      @include mq(pc) {
+        top: vwPC(225.5);
+        left: vwPC(529);
+      }
+      
+      @include mq(sp) {
+        top: vw(78.67);
+        left: vw(155);
+      }
+    }
+    
+    &-position {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        font-size: vwPC(24);
+        line-height: vwPC(35);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(12);
+        line-height: vw(17);
+      }
+    }
+    
+    &-name {
+      font-family: dnp-shuei-gothic-gin-std, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        margin-top: vwPC(12);
+        font-size: vwPC(42);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(6);
+        font-size: vw(18);
+      }
+      
+      .small {
+        @include mq(pc) {
+          font-size: vwPC(32);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(10);
+        }
+      }
+    }
+    
+    &-text {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 500;
+      
+      @include mq(pc) {
+        position: absolute;
+        top: vwPC(531.5);
+        left: vwPC(683);
+        font-size: vwPC(15);
+        line-height: vwPC(30);
+      }
+      
+      @include mq(sp) {
+        margin: vw(23) auto 0;
+        width: vw(315);
+        font-size: vw(11);
+        line-height: vw(20);
+      }
+    }
+  }
+  
+  &-price {
+    @include mq(sp) {
+      margin-top: vw(33);
+    }
+    
+    &-title {
+      &-en {
+        @include mq(pc) {
+          left: vwPC(99);
+        }
+        
+        @include mq(sp) {
+          left: vw(26);
+        }
+      }
+      
+      &-jp {
+        &:before {
+          right: 0;
+          
+          @include mq(pc) {
+            width: vwPC(526);
+          }
+          
+          @include mq(sp) {
+            width: vw(122);
+          }
+        }
+      }
+    }
+    
+    &-content {
+      background: #F8F8F8;
+      position: relative;
+      
+      @include mq(pc) {
+        margin-top: vwPC(86.24);
+        padding: vwPC(63.53) 0 vwPC(62);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(21.59);
+        padding: vw(19.52) 0 vw(49.54);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        width: 100%;
+        padding-top: 10%;
+        background: linear-gradient(to top right, #F8F8F8 50%, transparent 50%);
+      }
+    }
+    
+    &-list {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      @include mq(pc) {
+        width: vwPC(1166);
+      }
+      
+      @include mq(sp) {
+        width: vw(335);
+      }
+    }
+    
+    &-item {
+      position: relative;
+      font-size: 0;
+      
+      @include mq(pc) {
+        width: vwPC(266);
+      }
+      
+      @include mq(sp) {
+        width: vw(157.26);
+        margin-bottom: vw(20);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        z-index: 2;
+      }
+    }
+    
+    &-inner {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      
+      @include mq(pc) {
+        top: vwPC(68.5);
+      }
+      
+      @include mq(sp) {
+        top: vw(40.5);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #FFF;
+        z-index: 3;
+        
+        @include mq(pc) {
+          width: vwPC(70);
+          height: vwPC(4);
+        }
+        
+        @include mq(sp) {
+          width: vw(41.38);
+          height: vw(4);
+        }
+      }
+    }
+    
+    &-name {
+      color: #FFF;
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 500;
+      text-align: center;
+      
+      @include mq(pc) {
+        font-size: vwPC(24);
+        line-height: vwPC(35);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(13);
+        line-height: vw(19);
+      }
+    }
+    
+    &-price {
+      color: #FFF;
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 500;
+      text-align: center;
+      
+      @include mq(pc) {
+        margin-top: vwPC(53.5);
+        font-size: vwPC(32);
+        line-height: vwPC(43);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(34.09);
+        font-size: vw(18);
+        line-height: vw(24);
+      }
+      
+      .number {
+        font-family: $dm_sans;
+      }
+      
+      .small {
+        @include mq(pc) {
+          font-size: vwPC(20);
+          line-height: vwPC(43);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(11);
+          line-height: vw(24);
+        }
+      }
+    }
+    
+    &-text {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-align: center;
+      
+      @include mq(pc) {
+        margin-top: vwPC(53.5);
+        font-size: vwPC(32);
+        line-height: vwPC(56);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(15);
+        font-size: vw(13);
+        line-height: vw(26);
+      }
+    }
+  }
+  
+  &-contact-banner-2 {
+    &-content {
+      position: relative;
+      background: linear-gradient(to bottom, #F8F8F8 50%, transparent 50%);
+    }
+    
+    &-text {
+      position: absolute;
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 700;
+      color: #FFF;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        top: vwPC(215.67);
+        left: vwPC(182.5);
+        height: vwPC(172.65);
+        font-size: vwPC(42);
+        line-height: vwPC(61);
+        border-left: 6px solid #FFF;
+        padding-top: vwPC(25.33);
+        padding-left: vwPC(66);
+      }
+      
+      @include mq(sp) {
+        top: vw(113.48);
+        left: vw(39.61);
+        height: vw(67.04);
+        font-size: vw(14);
+        line-height: vw(26);
+        border-left: 4px solid #FFF;
+        padding-top: vw(10.52);
+        padding-left: vw(20.39);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        
+        @include mq(pc) {
+          background: linear-gradient(to bottom left, transparent calc(50% - 3px), #FFF calc(50% - 3px), #FFF calc(50% + 3px), transparent calc(50% + 3px));
+          width: vwPC(48);
+          height: vwPC(48);
+          left: vwPC(-54);
+        }
+        
+        @include mq(sp) {
+          background: linear-gradient(to bottom left, transparent calc(50% - 2px), #FFF calc(50% - 2px), #FFF calc(50% + 2px), transparent calc(50% + 2px));
+          width: vw(18);
+          height: vw(18);
+          left: vw(-20);
+        }
+      }
+    }
+    
+    &-button {
+      position: absolute;
+      
+      @include mq(pc) {
+        top: vwPC(576);
+        left: vwPC(100);
+      }
+      
+      @include mq(sp) {
+        top: vw(294);
+        left: vw(30);
+      }
+    }
+  }
+  
+  &-contact {
+    @include mq(pc) {
+      margin-top: vw(51);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(78);
+    }
+    
+    &-title {
+      &-en {
+        @include mq(pc) {
+          left: vwPC(577);
+        }
+        
+        @include mq(sp) {
+          left: vw(116);
+        }
+      }
+      
+      &-jp {
+        &:before {
+          left: 0;
+          
+          @include mq(pc) {
+            width: vwPC(486);
+          }
+          
+          @include mq(sp) {
+            width: vw(90);
+          }
+        }
+      }
+    }
+    
+    &-content {
+      position: relative;
+      background: #F8F8F8;
+      
+      @include mq(pc) {
+        margin-top: vwPC(68);
+        padding: vwPC(60) vwPC(183) vwPC(80);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(35);
+        padding: vw(40) vw(20) vw(53);
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        width: 100%;
+        padding-top: 10%;
+        background: linear-gradient(to bottom right, transparent 50%, #F8F8F8 50%);
+      }
+    }
+    
+    &-inner {
+      background: #FFF;
+      
+      @include mq(pc) {
+        padding: vwPC(50) vwPC(83) vwPC(48);
+      }
+      
+      @include mq(sp) {
+        padding: vw(6) vw(20) vw(20);
+      }
+    }
+    
+    &-line {
+      @include mq(pc) {
+        display: flex;
+        align-items: center;
+        margin-top: vwPC(20);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(10);
+      }
+    }
+    
+    &-name {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 500;
+      
+      @include mq(pc) {
+        width: vwPC(175);
+        font-size: vwPC(18);
+        line-height: vwPC(34);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(11);
+        line-height: vw(16);
+      }
+    }
+    
+    &-input {
+      font-family: source-han-sans-japanese, sans-serif;
+      font-weight: 500;
+      
+      @include mq(pc) {
+        width: vwPC(659);
+        font-size: vwPC(18);
+        line-height: vwPC(34);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(11);
+        line-height: vw(16);
+        margin-top: vw(6);
+      }
+      
+      input {
+        width: 100%;
+        background: #F8F8F8;
+        border: none;
+        
+        @include mq(pc) {
+          padding: vwPC(18) vwPC(20);
+          border-radius: vwPC(6);
+        }
+        
+        @include mq(sp) {
+          padding: vw(12) vw(5);
+          border-radius: vw(6);
+        }
+      }
+      
+      textarea {
+        width: 100%;
+        background: #F8F8F8;
+        resize: none;
+        border: none;
+        
+        @include mq(pc) {
+          padding: vwPC(18) vwPC(20);
+          height: vwPC(158);
+          border-radius: vwPC(6);
+        }
+        
+        @include mq(sp) {
+          padding: vw(12) vw(5);
+          height: vw(130);
+          border-radius: vw(6);
+        }
+      }
+    }
+    
+    &-button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      cursor: pointer;
+      
+      @include mq(pc) {
+        font-family: source-han-sans-japanese, sans-serif;
+        font-weight: 500;
+        font-size: vwPC(20);
+        line-height: vwPC(70);
+        border-radius: vwPC(38);
+      }
+      
+      @include mq(sp) {
+        font-family: dnp-shuei-gothic-gin-std, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        font-size: vw(11);
+        line-height: vw(46);
+        border-radius: vw(26);
+      }
+      
+      &:hover {
+        color: #FFF;
+      }
+      
+      &-area {
+        text-align: center;
+        display: block;
+        background: #FFF;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        
+        @include mq(pc) {
+          width: vwPC(250);
+          height: vwPC(70);
+          margin: vwPC(50) auto 0;
+          border-radius: vwPC(38);
+        }
+        
+        @include mq(sp) {
+          width: vw(130);
+          height: vw(46);
+          margin: vw(20) auto 0;
+          border-radius: vw(26);
+        }
+        
+        &:before {
+          content: " ";
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          width: 120%;
+          height: 100%;
+          background: #000;
+          transform-origin: right top;
+          transform: skewX(-30deg) scale(0, 1);
+          transition: transform .3s;
+        }
+        
+        &:hover {
+          &:before {
+            transform-origin: left top;
+            transform: skewX(-30deg) scale(1, 1);
+          }
+        }
+      }
+    }
+    
+    .wpcf7-spinner {
+      display: none;
+    }
+  }
+}
+

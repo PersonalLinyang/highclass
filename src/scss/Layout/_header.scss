@@ -1,0 +1,303 @@
+body {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 999;
+  
+  @include mq(pc) {
+    position: absolute;
+    top: vwPC(750);
+    background: #F8F8F8;
+    height: vwPC(120);
+    padding: 0 vwPC(100);
+  }
+  
+  @include mq(sp) {
+    position: fixed;
+    top: 0;
+    height: vw(52);
+  }
+  
+  &-logo {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    @include mq(pc) {
+      width: vwPC(313);
+      height: vwPC(64);
+      background-image: url("../img/front/logo.png");
+    }
+    
+    @include mq(sp) {
+      width: vw(129);
+      height: vw(27);
+      margin-top: vw(24);
+      margin-left: vw(20);
+      background-image: url("../img/front/logo-white.png");
+    }
+    
+    &.active {
+      background-image: url("../img/front/logo.png");
+    }
+  }
+  
+  &-menu {
+    @include mq(pc) {
+      display: none;
+    }
+    
+    @include mq(sp) {
+      position: relative;
+      background: #000;
+      width: vw(52);
+      height: vw(52);
+      cursor: pointer;
+    }
+    
+    &:before {
+      @include mq(sp) {
+        content: "";
+        position: absolute;
+        background: #FFF;
+        width: vw(23.91);
+        height: vw(3);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+    
+    &:after {
+      @include mq(sp) {
+        content: "";
+        position: absolute;
+        width: vw(23.91);
+        height: vw(18);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-top: vw(3) solid #FFF;
+        border-bottom: vw(3) solid #FFF;
+      }
+    }
+    
+    &.active {
+      background: #FFF;
+      
+      &:before {
+        @include mq(sp) {
+          content: "";
+          position: absolute;
+          background: linear-gradient(to bottom left, transparent calc(50% - 1.5px), #000 calc(50% - 1.5px), #000 calc(50% + 1.5px), transparent calc(50% + 1.5px));
+          width: vw(21);
+          height: vw(21);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+      
+      &:after {
+        @include mq(sp) {
+          content: "";
+          position: absolute;
+          width: vw(21);
+          height: vw(21);
+          background: linear-gradient(to bottom right, transparent calc(50% - 1.5px), #000 calc(50% - 1.5px), #000 calc(50% + 1.5px), transparent calc(50% + 1.5px));
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          border: none;
+        }
+      }
+    }
+  }
+  
+  &-navi {
+    &-pc {
+      @include mq(sp) {
+        display: none;
+      }
+    }
+    
+    &-sp {
+      @include mq(pc) {
+        display: none;
+      }
+      
+      @include mq(sp) {
+        position: absolute;
+        background: #FFF;
+        display: none;
+        top: 0;
+        left: 0;
+        padding: vw(60) 0 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+      }
+    }
+    
+    &-inner {
+      @include mq(sp) {
+        min-height: vw(615);
+      }
+    }
+    
+    &-title {
+      @include mq(pc) {
+        display: none;
+      }
+      
+      &-en {
+        @include mq(sp) {
+          position: absolute;
+          font-family: $dm_sans;
+          font-weight: 700;
+          font-size: vw(80);
+          line-height: vw(106);
+          top: vw(49);
+          left: vw(-7);
+          color: #F8F8F8;
+        }
+      }
+      
+      &-jp {
+        @include mq(sp) {
+          position: absolute;
+          font-family: source-han-sans-japanese, sans-serif;
+          font-weight: 700;
+          font-size: vw(20);
+          line-height: vw(29);
+          top: vw(93.5);
+          left: vw(144.5);
+        }
+      }
+    }
+    
+    &-list {
+      @include mq(pc) {
+        overflow: hidden;
+      }
+      
+      @include mq(sp) {
+        position: absolute;
+        top: vw(170);
+        left: vw(98);
+      }
+    }
+    
+    &-item {
+      font-family: $dm_sans;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      position: relative;
+      
+      @include mq(pc) {
+        float: left;
+        margin-left: vwPC(60);
+        font-size: vwPC(24);
+        line-height: vwPC(34);
+        padding-bottom: vwPC(4);
+      }
+      
+      @include mq(sp) {
+        height: vw(50);
+      }
+      
+      &-en {
+        @include mq(sp) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-family: $dm_sans;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          white-space: nowrap;
+          font-size: vw(15);
+          line-height: vw(50);
+        }
+      }
+      
+      &-jp {
+        @include mq(sp) {
+          position: absolute;
+          top: 0;
+          left: vw(117);
+          font-family: noto-sans-cjk-jp, sans-serif;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+          white-space: nowrap;
+          font-size: vw(13);
+          line-height: vw(50);
+        }
+      }
+      
+      &:before {
+        @include mq(pc) {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: vwPC(4);
+          background: #ADD700;
+          transition: width .3s;
+        }
+        
+        @include mq(sp) {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: vw(80.75);
+          transform: translateY(-50%);
+          width: vw(16);
+          height: vw(3);
+          background: #000;
+        }
+      }
+      
+      &:hover {
+        &:before {
+          @include mq(pc) {
+            width: 100%;
+            transition: width .3s;
+          }
+          
+          @include mq(sp) {
+            background: #ADD700;
+          }
+        }
+      }
+    }
+    
+    &-button {
+      @include mq(sp) {
+        position: absolute;
+        top: vw(482);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    
+    &-company {
+      @include mq(sp) {
+        position: absolute;
+        top: vw(623);
+        width: 100%;
+        text-align: center;
+        font-family: source-han-sans-japanese, sans-serif;
+        font-weight: 500;
+        font-size: vw(10);
+        line-height: vw(15);
+      }
+    }
+  }
+}

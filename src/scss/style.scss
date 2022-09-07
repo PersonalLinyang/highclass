@@ -1,0 +1,23 @@
+// FLOCSS
+// https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0
+
+// Foundation
+
+@import "Foundation/variable";
+@import "Foundation/mixin";
+@import "Foundation/base";
+
+// Layout
+
+@import "Layout/header";
+@import "Layout/main";
+@import "Layout/footer";
+
+// Pages
+
+@import "Pages/front";
+
+// Plugin
+
+@import "Plugin/section_scroll_fade";
+@import "Plugin/section_scroll_slide";
